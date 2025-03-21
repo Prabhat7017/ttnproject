@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workspaceFilter version="1.0">
+    <filter root="/apps/ttnproject/clientlibs"/>
+    <filter root="/apps/ttnproject/components"/>
+    <filter root="/apps/ttnproject/i18n"/>
+</workspaceFilter>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workspaceFilter version="1.0">
+    <filter root="/conf/ttnproject" mode="merge"/>
+    <filter root="/content/ttnproject" mode="merge"/>
+    <filter root="/content/dam/ttnproject" mode="merge">
+        <exclude pattern="/content/dam/ttnproject(/.*)?"/>
+        <include pattern="/content/dam/ttnproject/jcr:content(/.*)?"/>
+    </filter>
+    <filter root="/content/dam/ttnproject/asset.jpg" mode="merge"/>
+    <filter root="/content/experience-fragments/ttnproject" mode="merge"/>
+</workspaceFilter>
