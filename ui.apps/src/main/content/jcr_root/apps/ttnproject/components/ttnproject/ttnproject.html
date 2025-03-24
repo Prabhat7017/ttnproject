@@ -1,0 +1,16 @@
+<sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html" />
+
+<!-- Include CSS and JS from the student clientlib -->
+<sly data-sly-call="${clientlib.css @ categories='ttnproject.hello'}" />
+<sly data-sly-call="${clientlib.js @ categories='ttnproject.hello'}" />
+<div class="cmp-helloworld" data-cmp-is="helloworld">
+    <h2 class="cmp-helloworld__title">Hello World Component</h2>
+    <div class="cmp-helloworld__item" data-sly-test="${properties.text}">
+        <p class="cmp-helloworld__item-label">Text property:</p>
+        <pre class="cmp-helloworld__item-output" data-cmp-hook-helloworld="property">${properties.text}</pre>
+    </div>
+    <div class="cmp-helloworld__item" data-sly-use.model="com.ttn.project.core.models.HelloWorldModel" data-sly-test="${model.message}">
+        <p class="cmp-helloworld__item-label">Model message:</p>
+        <pre class="cmp-helloworld__item-output"data-cmp-hook-helloworld="model">${model.message}</pre>
+    </div>
+</div>
