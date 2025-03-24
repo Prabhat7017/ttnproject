@@ -6,7 +6,7 @@ import org.apache.sling.api.SlingHttpServletResponse;
 import org.apache.sling.api.resource.ModifiableValueMap;
 import org.apache.sling.api.resource.Resource;
 import org.apache.sling.api.resource.ResourceResolver;
-import org.apache.sling.api.servlets.ServletResolverConstants;
+import org.apache.sling.api.servlets.HttpConstants;
 import org.apache.sling.api.servlets.SlingAllMethodsServlet;
 import org.osgi.service.component.annotations.Component;
 
@@ -20,8 +20,9 @@ import java.io.IOException;
 @Component(
         service = Servlet.class,
         property = {
-                ServletResolverConstants.SLING_SERVLET_PATHS + "=/bin/ttnProject",
-                "sling.servlet.methods=POST"
+                "sling.servlet.resourceTypes=" + "dummy/resource",  //url-> http://localhost:4502//content/bootcamp_blog/dummy.json?page=/content/bootcamp_blog/us/en/blogs
+                "sling.servlet.methods=" + HttpConstants.METHOD_POST,
+                "sling.servlet.extensions=" + "json"
         }
 )
 public class UpdatePageTitleServlet extends SlingAllMethodsServlet {
